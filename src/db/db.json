@@ -1,0 +1,22 @@
+{
+  "colunas": [
+    { 
+      "id": 1,
+      "nome": "To Do", 
+      "tarefas": []
+    },
+    { 
+      "id": 2,
+      "nome": "Doing", 
+      "tarefas": []
+    },
+    { 
+      "id": 3,
+      "nome": "Done", 
+      "tarefas": []
+    }
+  ],
+  "tag":[
+
+  ]
+}
