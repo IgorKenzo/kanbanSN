@@ -15,9 +15,15 @@
 
   <button (click)="novo()">Nova Tag</button>
 
-  <div *ngIf="tag">
-    <input type="text" [(ngModel)]="tag.nome">
-    <input type="text" [(ngModel)]="tag.cor">
+  <div class="form" *ngIf="tag">
+    <!-- <input type="text" [(ngModel)]="tag.nome"> -->
+    <!-- <input type="text" [(ngModel)]="tag.cor"> -->
+    <!-- <input type="color" name="cor"> -->
+    <mat-form-field appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Nome da Tag" [(ngModel)]="tag.nome">
+    </mat-form-field>
     <button (click)="salvar()">Salvar</button>
   </div>
+
 </div>
