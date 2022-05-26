@@ -1,0 +1,11 @@
+#Container {
+  padding: 15px;
+}
+
+mat-chip {
+  max-width: 200px;
+}
+
+span {
+  width: 100%;
+}

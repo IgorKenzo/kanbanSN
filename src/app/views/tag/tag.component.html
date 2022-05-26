@@ -1,0 +1,23 @@
+<div id="Container">
+  <h2>Tags</h2>
+
+  <mat-chip-list class="mat-chip-list-stacked" aria-label="Color selection">
+    <mat-chip *ngFor="let tag of tags" [style.background-color]="tag.cor">
+      <span>{{tag.nome}}</span>
+      <button matChipRemove>
+        <mat-icon (click)="alterar(tag)">edit</mat-icon>
+      </button>
+      <button matChipRemove>
+        <mat-icon (click)="deletar(tag)">cancel</mat-icon>
+      </button>
+    </mat-chip>
+  </mat-chip-list>
+
+  <button (click)="novo()">Nova Tag</button>
+
+  <div *ngIf="tag">
+    <input type="text" [(ngModel)]="tag.nome">
+    <input type="text" [(ngModel)]="tag.cor">
+    <button (click)="salvar()">Salvar</button>
+  </div>
+</div>

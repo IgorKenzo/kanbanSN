@@ -1,22 +1,46 @@
 {
   "colunas": [
-    { 
+    {
       "id": 1,
-      "nome": "To Do", 
+      "nome": "To Do",
       "tarefas": []
     },
-    { 
+    {
       "id": 2,
-      "nome": "Doing", 
+      "nome": "Doing",
       "tarefas": []
     },
-    { 
+    {
       "id": 3,
-      "nome": "Done", 
+      "nome": "Done",
       "tarefas": []
     }
   ],
-  "tag":[
-
+  "tag": [
+    {
+      "nome": "A",
+      "cor": "#a3322a",
+      "id": 1
+    },
+    {
+      "nome": "B",
+      "cor": "#2a6ba3",
+      "id": 2
+    },
+    {
+      "nome": "C",
+      "cor": "#2aa32c",
+      "id": 3
+    },
+    {
+      "nome": "A",
+      "cor": "A",
+      "id": 4
+    },
+    {
+      "nome": "B",
+      "cor": "#f09022",
+      "id": 5
+    }
   ]
 }

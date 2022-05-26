@@ -1,5 +1,5 @@
 export class Tag {
-    id = -1;
+    id? : number;
     nome = "";
     cor = "";
 }
