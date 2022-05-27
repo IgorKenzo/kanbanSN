@@ -6,6 +6,14 @@ mat-chip {
   max-width: 200px;
 }
 
+.chipClaro {
+  color: black;
+}
+
+.chipEscuro {
+  color: white;
+}
+
 span {
   width: 100%;
 }

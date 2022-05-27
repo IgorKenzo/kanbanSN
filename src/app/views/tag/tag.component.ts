@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { retry } from 'rxjs';
 import { Tag } from 'src/model/tag';
 import { TagService } from 'src/services/tag.service';
 
@@ -56,6 +57,17 @@ export class TagComponent implements OnInit {
     this.TagService.deletar(tag).subscribe(() => {
       this.listar()
     })
+  }
+
+  ChecaSeClaro(cor : String) : Boolean {
+    let r = Number("0x" + cor.substring(1,3));
+    let g = Number("0x" + cor.substring(3,5));
+    let b = Number("0x" + cor.substring(5,7));
+
+    let cinza = (r + g + b) / 3;
+    console.log(r, g, b, cinza)
+
+    return cinza > 125;
   }
 
 }

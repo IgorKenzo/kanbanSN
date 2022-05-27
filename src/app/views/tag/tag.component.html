@@ -3,13 +3,24 @@
 
   <mat-chip-list class="mat-chip-list-stacked" aria-label="Color selection">
     <mat-chip *ngFor="let tag of tags" [style.background-color]="tag.cor">
-      <span>{{tag.nome}}</span>
-      <button matChipRemove>
+
+      <span *ngIf="ChecaSeClaro(tag.cor)" class="chipClaro">{{tag.nome}}</span>
+      <span *ngIf="!ChecaSeClaro(tag.cor)" class="chipEscuro">{{tag.nome}}</span>
+
+      <button matChipRemove *ngIf="ChecaSeClaro(tag.cor)">
+        <mat-icon (click)="alterar(tag)" style="color: black;">edit</mat-icon>
+      </button>
+      <button matChipRemove *ngIf="!ChecaSeClaro(tag.cor)">
         <mat-icon (click)="alterar(tag)">edit</mat-icon>
       </button>
-      <button matChipRemove>
+
+      <button matChipRemove *ngIf="ChecaSeClaro(tag.cor)">
+        <mat-icon (click)="deletar(tag)" style="color: black;">cancel</mat-icon>
+      </button>
+      <button matChipRemove *ngIf="!ChecaSeClaro(tag.cor)">
         <mat-icon (click)="deletar(tag)">cancel</mat-icon>
       </button>
+
     </mat-chip>
   </mat-chip-list>
 
@@ -22,13 +33,18 @@
     <input type="color" name="CorTag" [(ngModel)]="tag.cor" class="colorPicker">
 
     <button mat-mini-fab (click)="cancelar()" color="warn" aria-label="cancel" class="miniFab">
-      <mat-icon fontSet="material-icons-outlined">cancel</mat-icon>
+      <mat-icon fontSet="material-icons-outlined">delete</mat-icon>
     </button>
     <!-- <button (click)="salvar()">Salvar</button> -->
   </form>
 
-  <button mat-fab class="fab" (click)="novo()" color="accent" aria-label="novo" matRipple [matRippleUnbounded]="true" [matRippleRadius]="500" matRippleColor="#FFFFFF99">
+  <!-- <button mat-fab class="fab" (click)="novo()" color="accent" aria-label="novo" matRipple [matRippleUnbounded]="true" [matRippleRadius]="1000" matRippleColor="#FF9900"> -->
+  <button mat-fab class="fab" (click)="novo()" *ngIf="!tag" color="accent" aria-label="novo">
     <mat-icon fontSet="material-icons-outlined">new_label</mat-icon>
+  </button>
+
+  <button mat-fab class="fab" (click)="salvar()" *ngIf="tag" color="accent" aria-label="novo">
+    <mat-icon fontSet="material-icons-outlined">save</mat-icon>
   </button>
 
   <!-- <div class="form" *ngIf="tag">

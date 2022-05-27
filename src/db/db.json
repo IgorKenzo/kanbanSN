@@ -41,6 +41,21 @@
       "nome": "Laranja",
       "cor": "#ff8800",
       "id": 10
+    },
+    {
+      "nome": "Tag da Ju",
+      "cor": "#9e4c4c",
+      "id": 11
+    },
+    {
+      "nome": "Claro",
+      "cor": "#fafd6d",
+      "id": 12
+    },
+    {
+      "nome": "Branco",
+      "cor": "#ffffff",
+      "id": 13
     }
   ]
 }
