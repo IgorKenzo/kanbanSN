@@ -9,3 +9,51 @@ mat-chip {
 span {
   width: 100%;
 }
+
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.form {
+  min-width: 50px;
+  max-width: 2000px;
+
+  position: fixed;
+  bottom: -1px;
+  right: 84px;
+}
+
+.miniFab {
+  position: relative;
+  bottom: 5px;
+}
+
+.colorPicker {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: transparent;
+
+  position: relative;
+  top: 18px;
+
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.colorPicker::-webkit-color-swatch {
+  border-radius: 5px;
+  border: none;
+}
+
+.colorPicker::-moz-color-swatch {
+  border-radius: 5px;
+  border: none;
+}

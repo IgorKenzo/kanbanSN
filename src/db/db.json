@@ -33,19 +33,14 @@
       "id": 3
     },
     {
-      "nome": "A",
-      "cor": "A",
-      "id": 4
-    },
-    {
-      "nome": "B",
-      "cor": "#f09022",
-      "id": 5
-    },
-    {
-      "nome": "C",
+      "nome": "Tag",
       "cor": "",
-      "id": 6
+      "id": 9
+    },
+    {
+      "nome": "Laranja",
+      "cor": "#ff8800",
+      "id": 10
     }
   ]
 }

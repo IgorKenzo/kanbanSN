@@ -28,6 +28,10 @@ export class TagComponent implements OnInit {
     this.tag = new Tag();
   }
 
+  cancelar() {
+    this.tag = undefined;
+  }
+
   alterar(tag : Tag) {
     this.tag = tag
   }

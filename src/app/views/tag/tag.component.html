@@ -13,17 +13,29 @@
     </mat-chip>
   </mat-chip-list>
 
-  <button (click)="novo()">Nova Tag</button>
-
-  <div class="form" *ngIf="tag">
-    <!-- <input type="text" [(ngModel)]="tag.nome"> -->
-    <!-- <input type="text" [(ngModel)]="tag.cor"> -->
-    <!-- <input type="color" name="cor"> -->
-    <mat-form-field appearance="outline">
+  <form class="form" *ngIf="tag">
+    <mat-form-field appearance="outline" color="accent">
       <mat-label>Nome</mat-label>
-      <input matInput placeholder="Nome da Tag" [(ngModel)]="tag.nome">
+      <input matInput name="NomeTag" placeholder="Nome da Tag" [(ngModel)]="tag.nome">
     </mat-form-field>
+
+    <input type="color" name="CorTag" [(ngModel)]="tag.cor" class="colorPicker">
+
+    <button mat-mini-fab (click)="cancelar()" color="warn" aria-label="cancel" class="miniFab">
+      <mat-icon fontSet="material-icons-outlined">cancel</mat-icon>
+    </button>
+    <!-- <button (click)="salvar()">Salvar</button> -->
+  </form>
+
+  <button mat-fab class="fab" (click)="novo()" color="accent" aria-label="novo" matRipple [matRippleUnbounded]="true" [matRippleRadius]="500" matRippleColor="#FFFFFF99">
+    <mat-icon fontSet="material-icons-outlined">new_label</mat-icon>
+  </button>
+
+  <!-- <div class="form" *ngIf="tag">
+    <input type="text" [(ngModel)]="tag.nome">
+    <input type="text" [(ngModel)]="tag.cor">
     <button (click)="salvar()">Salvar</button>
-  </div>
+    <input type="color" name="cor">
+  </div> -->
 
 </div>

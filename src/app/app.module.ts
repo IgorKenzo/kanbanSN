@@ -9,6 +9,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatRippleModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatInputModule } from '@angular/material/input';
 import { TagComponent } from './views/tag/tag.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,7 +32,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatChipsModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
