@@ -13,15 +13,25 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatRippleModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatInputModule } from '@angular/material/input';
+import { TagComponent } from './views/tag/tag.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColunaComponent
+    ColunaComponent,
+    TagComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
@@ -29,7 +39,14 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     MatCardModule,
     MatGridListModule,
-    MatListModule
+    MatListModule,
+    MatChipsModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
