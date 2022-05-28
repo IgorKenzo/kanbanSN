@@ -1,0 +1,11 @@
+.column_flex {
+    display: flex;
+}
+
+.column_list {
+    display: flex; 
+    flex-direction: column; 
+    flex: 1; 
+    border: 1px solid; 
+    border-color: black;
+}

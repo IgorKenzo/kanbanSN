@@ -14,10 +14,15 @@
           "nome": "Teste2",
           "tags": []
         },
-         {
-          "id": 1,
-          "nome": "Teste",
-          "tags": []
+        {
+          "id": -1,
+          "nome": "Add",
+          "tags": [
+            {
+              "nome": "",
+              "cor": "#737373"
+            }
+          ]
         }
       ]
     },
@@ -35,7 +40,18 @@
     {
       "id": 3,
       "nome": "Done",
-      "tarefas": []
+      "tarefas": [
+        {
+          "id": -1,
+          "nome": "Add",
+          "tags": [
+            {
+              "nome": "",
+              "cor": "#737373"
+            }
+          ]
+        }
+      ]
     }
   ],
   "tag": [
@@ -78,6 +94,11 @@
       "nome": "Branco",
       "cor": "#ffffff",
       "id": 13
+    },
+    {
+      "nome": "Roxo",
+      "cor": "#6f05f0",
+      "id": 14
     }
   ]
 }
