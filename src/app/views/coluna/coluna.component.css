@@ -1,11 +1,65 @@
+.CabecalhoColuna {
+  font-size: larger;
+  padding-left: 10px;
+}
+
 .column_flex {
-    display: flex;
+  display: flex;
 }
 
 .column_list {
-    display: flex; 
-    flex-direction: column; 
-    flex: 1; 
-    border: 1px solid; 
-    border-color: black;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 33%;
+
+  background-color: #404040;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.cardTarefa {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+  min-height: 30px;
+  font-size: medium;
+  background-color: #303030;
+  /* position: relative; */
+}
+
+.btnAddNew {
+  margin-bottom: 5px;
+}
+
+.listaTag {
+  overflow-x: scroll;
+  white-space: nowrap;
+
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.listaTag::-webkit-scrollbar {
+  display: none;
+}
+
+.marcadorTag {
+  width: 50px;
+  height: 12px;
+  border-radius: 10px;
+  margin-right: 5px;
+
+  display: inline-block;
+}
+
+.tituloIconsCard {
+  margin: 5px;
+  display: flex;
+}
+
+.spanTipo1 {
+  flex: 1;
+  line-height: 40px;
 }

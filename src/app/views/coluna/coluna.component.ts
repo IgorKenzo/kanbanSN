@@ -21,7 +21,7 @@ export class ColunaComponent implements OnInit {
     this.listar();
   }
 
-  
+
   openDialog(): void {
     const dialogRef = this.dialog.open(TarefaFormDialogComponent, {
       width: '30%',
@@ -38,6 +38,8 @@ export class ColunaComponent implements OnInit {
   listar() {
     this.colunaService.listar().subscribe(cols => {
       this.colunas = cols;
+      console.log(this.colunas)
+      console.log("AAA")
     })
   }
 

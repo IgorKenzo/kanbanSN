@@ -65,7 +65,6 @@ export class TagComponent implements OnInit {
     let b = Number("0x" + cor.substring(5,7));
 
     let cinza = (r + g + b) / 3;
-    console.log(r, g, b, cinza)
 
     return cinza > 125;
   }

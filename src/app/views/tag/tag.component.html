@@ -27,7 +27,7 @@
   <form class="form" *ngIf="tag">
     <mat-form-field appearance="outline" color="accent">
       <mat-label>Nome</mat-label>
-      <input matInput name="NomeTag" placeholder="Nome da Tag" [(ngModel)]="tag.nome">
+      <input matInput name="NomeTag" placeholder="Nome da Tag" [(ngModel)]="tag.nome" autofocus>
     </mat-form-field>
 
     <input type="color" name="CorTag" [(ngModel)]="tag.cor" class="colorPicker">
