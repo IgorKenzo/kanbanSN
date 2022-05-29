@@ -4,6 +4,7 @@ import { Coluna } from 'src/model/coluna';
 import { Tag } from 'src/model/tag';
 import { Tarefa } from 'src/model/tarefa';
 import { ColunaService } from 'src/services/coluna.service';
+import { TagService } from 'src/services/tag.service';
 import { TarefaFormDialogComponent } from '../tarefa-form-dialog/tarefa-form-dialog.component';
 
 @Component({
@@ -13,45 +14,64 @@ import { TarefaFormDialogComponent } from '../tarefa-form-dialog/tarefa-form-dia
 })
 export class ColunaComponent implements OnInit {
 
-  colunas : Coluna[] | null = null ;
+  colunas? : Coluna[];
+  tarefa? : Tarefa
+  indexColuna? : number
 
-  constructor(private colunaService: ColunaService, public dialog: MatDialog) { }
+  tags : Tag[] = [];
+
+  constructor(private TagService: TagService, private colunaService: ColunaService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.listar();
+    this.listarTags();
   }
 
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(TarefaFormDialogComponent, {
-      width: '30%',
-      data: {}//{name: this.name, animal: this.animal},
-    });
+  // openDialog(): void {
+  //   const dialogRef = this.dialog.open(TarefaFormDialogComponent, {
+  //     width: '30%',
+  //     data: {}//{name: this.name, animal: this.animal},
+  //   });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      // this.animal = result;
-    });
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log('The dialog was closed');
+  //     // this.animal = result;
+  //   });
+  // }
+
+  novo(indexColuna : number) {
+    this.tarefa = new Tarefa();
+    this.indexColuna = indexColuna;
+    console.log(indexColuna)
   }
-
+  cancelar() {
+    this.tarefa = undefined;
+    this.indexColuna = undefined;
+  }
 
   listar() {
     this.colunaService.listar().subscribe(cols => {
       this.colunas = cols;
-      console.log(this.colunas)
-      console.log("AAA")
     })
   }
 
-  adicionarTarefa(col: Coluna){ //, tar: Tarefa
-    let t = new Tarefa()
-    t.nome = "Add"
-    t.tags.push(new Tag());
+  listarTags() {
+    this.TagService.listar().subscribe((tags) => {
+      this.tags = tags;
+    })
+  }
 
-    col.tarefas.push(t);
-    this.colunaService.salvarColuna(col).subscribe(() => {
-      this.listar();
-    });
+  adicionarTarefa(){ //, tar: Tarefa
+    if (this.colunas && this.indexColuna != undefined && this.tarefa) {
+      this.colunas[this.indexColuna].tarefas.push(this.tarefa);
+      console.log(this.colunas);
+      this.colunaService.salvarColuna(this.colunas[this.indexColuna]).subscribe(() => {
+        this.listar();
+      });
+    }
+    this.tarefa = undefined;
+    this.indexColuna = undefined;
   }
 
   deletarTarefa(col: Coluna, tar: Tarefa) {
@@ -67,5 +87,27 @@ export class ColunaComponent implements OnInit {
     this.colunaService.salvarColuna(col).subscribe(() => {
       this.listar();
     });
+  }
+
+  adicionarTagGeral(tag : Tag) {
+    if (this.tarefa) {
+      let t = new Tag()
+    }
+  }
+
+  adicionarTagTarefaNova(tag : Tag) {
+    if (this.tarefa) {
+      let t = new Tag()
+    }
+  }
+
+  ChecaSeClaro(cor : String) : Boolean {
+    let r = Number("0x" + cor.substring(1,3));
+    let g = Number("0x" + cor.substring(3,5));
+    let b = Number("0x" + cor.substring(5,7));
+
+    let cinza = (r + g + b) / 3;
+
+    return cinza > 125;
   }
 }

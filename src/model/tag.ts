@@ -1,6 +1,6 @@
 export class Tag {
   id? : number;
   nome = "";
-  cor = "#737373";
+  cor = "#712B9C";
 }
 

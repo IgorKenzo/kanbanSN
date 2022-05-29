@@ -10,6 +10,11 @@
           "tags": []
         },
         {
+          "id": 1,
+          "nome": "Teste",
+          "tags": []
+        },
+        {
           "id": -1,
           "nome": "Add",
           "tags": [
@@ -65,6 +70,11 @@
           "id": 1,
           "nome": "Teste3",
           "tags": []
+        },
+        {
+          "id": -1,
+          "nome": "A",
+          "tags": []
         }
       ]
     },
@@ -81,6 +91,11 @@
               "cor": "#737373"
             }
           ]
+        },
+        {
+          "id": -1,
+          "nome": "A",
+          "tags": []
         }
       ]
     }
@@ -125,21 +140,6 @@
       "nome": "Branco",
       "cor": "#ffffff",
       "id": 13
-    },
-    {
-      "nome": "Roxo",
-      "cor": "#6f05f0",
-      "id": 14
-    },
-    {
-      "nome": "Tag",
-      "cor": "#5f1b1b",
-      "id": 15
-    },
-    {
-      "nome": "Tag",
-      "cor": "#1d0707",
-      "id": 16
     }
   ]
 }

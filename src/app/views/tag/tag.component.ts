@@ -38,7 +38,7 @@ export class TagComponent implements OnInit {
   }
 
   salvar() {
-    if (this.tag) {
+    if (this.tag && this.tag.nome.length > 0) {
       if (!this.tag.id) {
         this.TagService.criar(this.tag).subscribe((tag) => {
           this.listar();

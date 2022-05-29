@@ -21,8 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatInputModule } from '@angular/material/input';
 import { TagComponent } from './views/tag/tag.component';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
 import { TarefaFormDialogComponent } from './views/tarefa-form-dialog/tarefa-form-dialog.component';
 
 

@@ -5,6 +5,7 @@
 
 .column_flex {
   display: flex;
+  align-items: flex-start;
 }
 
 .column_list {
@@ -12,25 +13,22 @@
   flex-direction: column;
   flex: 1;
   max-width: 33%;
+  min-width: 15%;
 
   background-color: #404040;
   border-radius: 5px;
   margin: 10px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .cardTarefa {
-  margin-bottom: 5px;
+  margin-top: 5px;
   margin-top: 5px;
   border-radius: 5px;
   min-height: 30px;
   font-size: medium;
   background-color: #303030;
   /* position: relative; */
-}
-
-.btnAddNew {
-  margin-bottom: 5px;
 }
 
 .listaTag {
@@ -42,6 +40,10 @@
 }
 
 .listaTag::-webkit-scrollbar {
+  display: none;
+}
+
+.listaTag::-moz-scrollbar {
   display: none;
 }
 
@@ -62,4 +64,47 @@
 .spanTipo1 {
   flex: 1;
   line-height: 40px;
+}
+
+.btnAddNew {
+  margin-top: 5px;
+}
+
+.formNovaTarefa {
+  margin-top: 5px;
+}
+
+.formNovaTarefa mat-form-field {
+  width: 90%;
+}
+
+.addNovatagTarefaNova {
+  position: relative;
+  top: 8px;
+  flex: 1;
+}
+
+.linhaBtns {
+  display: flex;
+
+  margin-top: 5px;
+}
+
+.btnSalvar {
+  margin-right: 5px;
+  flex: 5;
+}
+
+.btnCancelar {
+  flex: 1;
+}
+
+.meuBtnMenu {
+  width: 250px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+
+  text-align: left;
+  border-radius: 200px;
 }
