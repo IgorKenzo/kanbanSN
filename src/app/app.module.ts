@@ -12,7 +12,7 @@ import { ColunaComponent } from './views/coluna/coluna.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
-
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -52,7 +52,8 @@ import { TarefaFormDialogComponent } from './views/tarefa-form-dialog/tarefa-for
     MatButtonModule,
     MatRippleModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

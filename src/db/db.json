@@ -5,15 +5,16 @@
       "nome": "To Do",
       "tarefas": [
         {
-          "id": 1,
-          "nome": "Teste",
+          "id": -1,
+          "nome": "tarefa",
           "tags": []
-        },
-        {
-          "id": 1,
-          "nome": "Teste",
-          "tags": []
-        },
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Doing",
+      "tarefas": [
         {
           "id": -1,
           "nome": "Add",
@@ -59,22 +60,6 @@
               "cor": "#737373"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "nome": "Doing",
-      "tarefas": [
-        {
-          "id": 1,
-          "nome": "Teste3",
-          "tags": []
-        },
-        {
-          "id": -1,
-          "nome": "A",
-          "tags": []
         }
       ]
     },
@@ -84,6 +69,11 @@
       "tarefas": [
         {
           "id": -1,
+          "nome": "mostrar pro Igor",
+          "tags": []
+        },
+        {
+          "id": -1,
           "nome": "Add",
           "tags": [
             {
@@ -91,11 +81,6 @@
               "cor": "#737373"
             }
           ]
-        },
-        {
-          "id": -1,
-          "nome": "A",
-          "tags": []
         }
       ]
     }

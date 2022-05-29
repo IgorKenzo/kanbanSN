@@ -1,3 +1,4 @@
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Coluna } from 'src/model/coluna';
@@ -98,6 +99,27 @@ export class ColunaComponent implements OnInit {
   adicionarTagTarefaNova(tag : Tag) {
     if (this.tarefa) {
       let t = new Tag()
+    }
+  }
+
+  drop(event: CdkDragDrop<Tarefa[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    }
+    else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
+    }
+    if (this.colunas) {
+      this.colunas.forEach(c => {
+        this.colunaService.salvarColuna(c).subscribe(() => {
+          this.listar();
+        });
+      });
     }
   }
 

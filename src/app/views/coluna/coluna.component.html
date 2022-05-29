@@ -1,9 +1,9 @@
-<div *ngIf="colunas" class="column_flex">
+<div *ngIf="colunas" class="column_flex" cdkDropListGroup>
 
-  <mat-list class="column_list" *ngFor="let c of colunas">
+  <mat-list class="column_list" *ngFor="let c of colunas" cdkDropList #doneList="cdkDropList" [cdkDropListData]="c.tarefas" (cdkDropListDropped)="drop($event)">
     <div mat-subheader class="CabecalhoColuna">{{c.nome}}</div>
 
-      <div class="cardTarefa" *ngFor="let t of c.tarefas">
+      <div class="cardTarefa" *ngFor="let t of c.tarefas" cdkDrag>
         <div class="listaTag" *ngIf="t.tags.length > 0">
           <div *ngFor="let tag of t.tags" class="marcadorTag" [style.background-color]="tag.cor"></div>
         </div>
@@ -11,6 +11,12 @@
           <span class="spanTipo1">{{t.nome}}</span>
           <button mat-icon-button [matMenuTriggerFor]="menuY">
             <mat-icon>add_circle</mat-icon>
+          </button>
+          <button mat-icon-button color="accent">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deletarTarefa(c, t)">
+              <mat-icon>delete</mat-icon>
           </button>
 
           <mat-menu #menuY="matMenu">
@@ -28,12 +34,6 @@
             </button>
           </mat-menu>
 
-          <button mat-icon-button color="accent">
-            <mat-icon>edit</mat-icon>
-          </button>
-          <button mat-icon-button color="warn" (click)="deletarTarefa(c, t)">
-              <mat-icon>delete</mat-icon>
-          </button>
         </div>
       </div>
 
