@@ -1,50 +1,52 @@
 <div *ngIf="colunas" class="column_flex" cdkDropListGroup>
 
-  <mat-list class="column_list" *ngFor="let c of colunas" cdkDropList #doneList="cdkDropList" [cdkDropListData]="c.tarefas" (cdkDropListDropped)="drop($event)">
+  <mat-list class="column_list" *ngFor="let c of colunas">
     <div mat-subheader class="CabecalhoColuna">{{c.nome}}</div>
 
-      <div class="cardTarefa" *ngFor="let t of c.tarefas" cdkDrag>
-        <div class="listaTag" *ngIf="t.tags.length > 0">
-          <div *ngFor="let tag of t.tags" class="marcadorTag" [style.background-color]="tag.cor"></div>
-        </div>
-        <div class="tituloIconsCard">
-          <span class="spanTipo1">{{t.nome}}</span>
-          <button mat-icon-button [matMenuTriggerFor]="menuY">
-            <mat-icon>add_circle</mat-icon>
-          </button>
-          <button mat-icon-button color="accent">
-            <mat-icon>edit</mat-icon>
-          </button>
-          <button mat-icon-button color="warn" (click)="deletarTarefa(c, t)">
-              <mat-icon>delete</mat-icon>
-          </button>
+      <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="c.tarefas" (cdkDropListDropped)="drop($event)" style="min-height: 5px;">
+        <div class="cardTarefa" *ngFor="let t of c.tarefas" cdkDrag>
+          <div class="listaTag" *ngIf="t.tags.length > 0">
+            <div *ngFor="let tag of t.tags" class="marcadorTag" [style.background-color]="tag.cor"></div>
+          </div><!--Tags-->
+          <div class="tituloIconsCard">
+            <span class="spanTipo1 corBrancaAntiBug">{{t.nome}}</span>
+            <button mat-icon-button [matMenuTriggerFor]="menuY">
+              <mat-icon class="corBrancaAntiBug">add_circle</mat-icon>
+            </button>
+            <button mat-icon-button color="accent">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="deletarTarefa(c, t)">
+                <mat-icon>delete</mat-icon>
+            </button>
 
-          <mat-menu #menuY="matMenu">
-            <button mat-menu-item>
-              <mat-icon>dialpad</mat-icon>
-              <span>Redial</span>
-            </button>
-            <button mat-menu-item disabled>
-              <mat-icon>voicemail</mat-icon>
-              <span>Check voice mail</span>
-            </button>
-            <button mat-menu-item>
-              <mat-icon>notifications_off</mat-icon>
-              <span>Disable alerts</span>
-            </button>
-          </mat-menu>
+            <mat-menu #menuY="matMenu">
+              <button mat-menu-item>
+                <mat-icon>dialpad</mat-icon>
+                <span>Redial</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon>voicemail</mat-icon>
+                <span>Check voice mail</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>notifications_off</mat-icon>
+                <span>Disable alerts</span>
+              </button>
+            </mat-menu>
 
-        </div>
-      </div>
+          </div><!--Titulo (+) (/) (U)-->
+        </div><!--Card-->
+      </div><!--Drop List-->
 
       <button mat-flat-button color="accent" (click)="novo(colunas.indexOf(c))" class="btnAddNew" *ngIf="!(indexColuna == colunas.indexOf(c)) ">
         <mat-icon>add</mat-icon>
-      </button>
+      </button><!--Nova Tarefa-->
 
       <div *ngIf="tarefa && indexColuna == colunas.indexOf(c)" class="formNovaTarefa">
         <div class="listaTag">
           <div *ngFor="let tag of tarefa.tags" class="marcadorTag" [style.background-color]="tag.cor"></div>
-        </div>
+        </div><!--Tags-->
 
         <form style="display: flex;">
           <mat-form-field appearance="outline" color="accent" style="margin-bottom: -1.25em; flex: 9;">
@@ -66,7 +68,7 @@
             </div>
           </mat-menu>
 
-        </form>
+        </form><!--Input (+)-->
 
         <div class="linhaBtns">
           <button mat-flat-button color="accent" (click)="adicionarTarefa()" class="btnSalvar">
@@ -75,9 +77,8 @@
           <button mat-flat-button color="warn" (click)="cancelar()" class="btnCancelar">
             <mat-icon>delete</mat-icon>
           </button>
-        </div>
-
-      </div>
+        </div><!--Salvar Deletar-->
+      </div><!--Div nova Tarefa-->
 
       <!-- <mat-card style="margin: 10px;" *ngFor="let t of c.tarefas">
           <mat-card-title> {{ t.nome }}</mat-card-title>

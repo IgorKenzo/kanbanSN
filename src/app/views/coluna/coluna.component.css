@@ -66,6 +66,10 @@
   line-height: 40px;
 }
 
+.corBrancaAntiBug {
+  color: white;
+}
+
 .btnAddNew {
   margin-top: 5px;
 }
