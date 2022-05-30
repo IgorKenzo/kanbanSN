@@ -6,13 +6,77 @@
       "tarefas": [
         {
           "id": -1,
-          "nome": "bsjkfjsk",
+          "nome": "BFVBFBFBFB",
           "tags": []
         },
         {
           "id": -1,
-          "nome": "mostrar pro Igor",
+          "nome": "Aaaa",
+          "tags": [
+            {
+              "nome": "A",
+              "cor": "#a3322a"
+            },
+            {
+              "nome": "A",
+              "cor": "#a3322a"
+            }
+          ]
+        },
+        {
+          "id": -1,
+          "nome": "GSGSGS",
+          "tags": [
+            {
+              "nome": "A",
+              "cor": "#a3322a"
+            },
+            {
+              "nome": "B",
+              "cor": "#2a6ba3"
+            },
+            {
+              "nome": "C",
+              "cor": "#2aa32c"
+            }
+          ]
+        },
+        {
+          "id": -1,
+          "nome": "s",
+          "tags": [
+            {
+              "nome": "Tag",
+              "cor": ""
+            },
+            {
+              "nome": "Tag",
+              "cor": ""
+            },
+            {
+              "nome": "C",
+              "cor": "#2aa32c"
+            }
+          ]
+        },
+        {
+          "id": -1,
+          "nome": "GDHJGKHGJKD",
           "tags": []
+        },
+        {
+          "id": -1,
+          "nome": "a",
+          "tags": [
+            {
+              "nome": "A",
+              "cor": "#a3322a"
+            },
+            {
+              "nome": "A",
+              "cor": "#a3322a"
+            }
+          ]
         }
       ]
     },
@@ -24,6 +88,106 @@
           "id": -1,
           "nome": "tarefa",
           "tags": []
+        },
+        {
+          "id": -1,
+          "nome": "Add",
+          "tags": [
+            {
+              "nome": "",
+              "cor": "#737373"
+            }
+          ]
+        },
+        {
+          "id": -1,
+          "nome": "fsfs",
+          "tags": [
+            {
+              "nome": "Tag",
+              "cor": ""
+            }
+          ]
+        },
+        {
+          "id": -1,
+          "nome": "Funcionou?",
+          "tags": [
+            {
+              "nome": "Laranja",
+              "cor": "#ff8800"
+            },
+            {
+              "nome": "Claro",
+              "cor": "#fafd6d"
+            }
+          ]
+        },
+        {
+          "id": -1,
+          "nome": "Add",
+          "tags": [
+            {
+              "nome": "",
+              "cor": "#FF9900"
+            },
+            {
+              "nome": "",
+              "cor": "#737373"
+            },
+            {
+              "nome": "",
+              "cor": "#FF9900"
+            },
+            {
+              "nome": "",
+              "cor": "#737373"
+            },
+            {
+              "nome": "",
+              "cor": "#FF9900"
+            },
+            {
+              "nome": "",
+              "cor": "#737373"
+            },
+            {
+              "nome": "",
+              "cor": "#FF9900"
+            },
+            {
+              "nome": "",
+              "cor": "#737373"
+            },
+            {
+              "nome": "",
+              "cor": "#FF9900"
+            },
+            {
+              "nome": "",
+              "cor": "#737373"
+            }
+          ]
+        },
+        {
+          "id": -1,
+          "nome": "tjioehgjkld",
+          "tags": []
+        },
+        {
+          "id": -1,
+          "nome": "sssfs",
+          "tags": []
+        },
+        {
+          "id": -1,
+          "nome": "Tenta copiar o texto sem arrastar",
+          "tags": [
+            {
+              "nome": "Laranja",
+              "cor": "#ff8800"
+            }
+          ]
         }
       ]
     },
@@ -33,68 +197,7 @@
       "tarefas": [
         {
           "id": -1,
-          "nome": "Add",
-          "tags": [
-            {
-              "nome": "",
-              "cor": "#737373"
-            }
-          ]
-        },
-        {
-          "id": -1,
           "nome": "jksbfsjkhfjkshfjkshfjksf",
-          "tags": []
-        },
-        {
-          "id": -1,
-          "nome": "Add",
-          "tags": [
-            {
-              "nome": "",
-              "cor": "#FF9900"
-            },
-            {
-              "nome": "",
-              "cor": "#737373"
-            },
-            {
-              "nome": "",
-              "cor": "#FF9900"
-            },
-            {
-              "nome": "",
-              "cor": "#737373"
-            },
-            {
-              "nome": "",
-              "cor": "#FF9900"
-            },
-            {
-              "nome": "",
-              "cor": "#737373"
-            },
-            {
-              "nome": "",
-              "cor": "#FF9900"
-            },
-            {
-              "nome": "",
-              "cor": "#737373"
-            },
-            {
-              "nome": "",
-              "cor": "#FF9900"
-            },
-            {
-              "nome": "",
-              "cor": "#737373"
-            }
-          ]
-        },
-        {
-          "id": -1,
-          "nome": "sssfs",
           "tags": []
         }
       ]
@@ -140,6 +243,11 @@
       "nome": "Branco",
       "cor": "#ffffff",
       "id": 13
+    },
+    {
+      "nome": "ddgdgd",
+      "cor": "#712B9C",
+      "id": 14
     }
   ]
 }

@@ -44,7 +44,7 @@
       </button><!--Nova Tarefa-->
 
       <div *ngIf="tarefa && indexColuna == colunas.indexOf(c)" class="formNovaTarefa">
-        <div class="listaTag">
+        <div class="listaTag" *ngIf="tarefa.tags.length > 0">
           <div *ngFor="let tag of tarefa.tags" class="marcadorTag" [style.background-color]="tag.cor"></div>
         </div><!--Tags-->
 
@@ -58,7 +58,7 @@
           </button>
 
           <mat-menu #menuX="matMenu" class="meuMenu">
-            <div *ngFor="let t of tags">
+            <div *ngFor="let t of tags" (click)="adicionarTagTarefaNova(t)" >
               <button mat-flat-button [style.background-color]="t.cor" class="meuBtnMenu" *ngIf="!ChecaSeClaro(t.cor)" style="color: white;">
                 <span>{{t.nome}}</span>
               </button>
@@ -78,6 +78,7 @@
             <mat-icon>delete</mat-icon>
           </button>
         </div><!--Salvar Deletar-->
+
       </div><!--Div nova Tarefa-->
 
       <!-- <mat-card style="margin: 10px;" *ngFor="let t of c.tarefas">

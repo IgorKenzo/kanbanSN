@@ -44,7 +44,6 @@ export class ColunaComponent implements OnInit {
   novo(indexColuna : number) {
     this.tarefa = new Tarefa();
     this.indexColuna = indexColuna;
-    console.log(indexColuna)
   }
   cancelar() {
     this.tarefa = undefined;
@@ -66,7 +65,6 @@ export class ColunaComponent implements OnInit {
   adicionarTarefa(){ //, tar: Tarefa
     if (this.colunas && this.indexColuna != undefined && this.tarefa) {
       this.colunas[this.indexColuna].tarefas.push(this.tarefa);
-      console.log(this.colunas);
       this.colunaService.salvarColuna(this.colunas[this.indexColuna]).subscribe(() => {
         this.listar();
       });
@@ -99,6 +97,10 @@ export class ColunaComponent implements OnInit {
   adicionarTagTarefaNova(tag : Tag) {
     if (this.tarefa) {
       let t = new Tag()
+      t.nome = tag.nome;
+      t.cor = tag.cor;
+
+      this.tarefa.tags.push(t);
     }
   }
 
