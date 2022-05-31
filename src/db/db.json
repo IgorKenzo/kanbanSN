@@ -7,7 +7,8 @@
         {
           "id": -1,
           "nome": "BFVBFBFBFB",
-          "tags": []
+          "tags": [],
+          "desc": "asdasdas"
         },
         {
           "id": -1,
@@ -18,8 +19,12 @@
               "cor": "#a3322a"
             },
             {
-              "nome": "A",
-              "cor": "#a3322a"
+              "nome": "B",
+              "cor": "#2a6ba3"
+            },
+            {
+              "nome": "C",
+              "cor": "#2aa32c"
             }
           ]
         },
@@ -60,23 +65,14 @@
           ]
         },
         {
-          "id": -1,
-          "nome": "GDHJGKHGJKD",
-          "tags": []
-        },
-        {
-          "id": -1,
-          "nome": "a",
+          "nome": "AAAAAAAAAAAAA",
           "tags": [
             {
-              "nome": "A",
-              "cor": "#a3322a"
-            },
-            {
-              "nome": "A",
-              "cor": "#a3322a"
+              "nome": "Claro",
+              "cor": "#fafd6d"
             }
-          ]
+          ],
+          "desc": "VBNMMM"
         }
       ]
     },
@@ -106,6 +102,14 @@
             {
               "nome": "Tag",
               "cor": ""
+            },
+            {
+              "nome": "B",
+              "cor": "#2a6ba3"
+            },
+            {
+              "nome": "Tag da Ju",
+              "cor": "#9e4c4c"
             }
           ]
         },
@@ -196,9 +200,60 @@
       "nome": "Done",
       "tarefas": [
         {
+          "nome": "asd",
+          "tags": [
+            {
+              "nome": "A",
+              "cor": "#a3322a"
+            },
+            {
+              "nome": "B",
+              "cor": "#2a6ba3"
+            },
+            {
+              "nome": "C",
+              "cor": "#2aa32c"
+            },
+            {
+              "nome": "Laranja",
+              "cor": "#ff8800"
+            },
+            {
+              "nome": "Tag da Ju",
+              "cor": "#9e4c4c"
+            },
+            {
+              "nome": "Tag da Ju",
+              "cor": "#9e4c4c"
+            },
+            {
+              "nome": "Claro",
+              "cor": "#fafd6d"
+            },
+            {
+              "nome": "Claro",
+              "cor": "#fafd6d"
+            },
+            {
+              "nome": "Branco",
+              "cor": "#ffffff"
+            },
+            {
+              "nome": "ddgdgd",
+              "cor": "#712B9C"
+            }
+          ],
+          "desc": ""
+        },
+        {
           "id": -1,
           "nome": "jksbfsjkhfjkshfjkshfjksf",
-          "tags": []
+          "tags": [
+            {
+              "nome": "C",
+              "cor": "#2aa32c"
+            }
+          ]
         }
       ]
     }

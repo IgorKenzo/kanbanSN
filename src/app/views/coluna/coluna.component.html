@@ -13,7 +13,7 @@
             <button mat-icon-button [matMenuTriggerFor]="menuY">
               <mat-icon class="corBrancaAntiBug">add_circle</mat-icon>
             </button>
-            <button mat-icon-button color="accent">
+            <button mat-icon-button color="accent" (click)="openDialog(t, c)">
               <mat-icon>edit</mat-icon>
             </button>
             <button mat-icon-button color="warn" (click)="deletarTarefa(c, t)">
@@ -80,38 +80,6 @@
         </div><!--Salvar Deletar-->
 
       </div><!--Div nova Tarefa-->
-
-      <!-- <mat-card style="margin: 10px;" *ngFor="let t of c.tarefas">
-          <mat-card-title> {{ t.nome }}</mat-card-title>
-          <mat-card-subtitle *ngFor="let tag of t.tags"> {{ tag.nome }} </mat-card-subtitle>
-          <mat-card-actions>
-
-              <button mat-button color="accent">
-                  <mat-icon>edit</mat-icon>
-              </button>
-
-              <button mat-button color="warn" (click)="deletarTarefa(c, t)">
-                  <mat-icon>delete</mat-icon>
-              </button>
-              <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-                  <mat-icon>more_vert</mat-icon>
-                </button>
-                <mat-menu #menu="matMenu">
-                  <button mat-menu-item>
-                    <mat-icon>dialpad</mat-icon>
-                    <span>Redial</span>
-                  </button>
-                  <button mat-menu-item disabled>
-                    <mat-icon>voicemail</mat-icon>
-                    <span>Check voice mail</span>
-                  </button>
-                  <button mat-menu-item>
-                    <mat-icon>notifications_off</mat-icon>
-                    <span>Disable alerts</span>
-                  </button>
-                </mat-menu> ->
-          </mat-card-actions>
-      </mat-card> -->
 
   </mat-list>
 

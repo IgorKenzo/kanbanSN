@@ -29,17 +29,24 @@ export class ColunaComponent implements OnInit {
   }
 
 
-  // openDialog(): void {
-  //   const dialogRef = this.dialog.open(TarefaFormDialogComponent, {
-  //     width: '30%',
-  //     data: {}//{name: this.name, animal: this.animal},
-  //   });
+  openDialog(t: Tarefa, col: Coluna): void {
+    const dialogRef = this.dialog.open(TarefaFormDialogComponent, {
+      width: '30%',
+      data: t//{name: this.name, animal: this.animal},
+    });
 
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log('The dialog was closed');
-  //     // this.animal = result;
-  //   });
-  // }
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        let i = col.tarefas.findIndex(ta => ta == t);
+        col.tarefas[i] = result;
+        
+        this.colunaService.salvarColuna(col).subscribe(res => {
+          this.listar();
+          this.listarTags();
+        });
+      }
+    });
+  }
 
   novo(indexColuna : number) {
     this.tarefa = new Tarefa();

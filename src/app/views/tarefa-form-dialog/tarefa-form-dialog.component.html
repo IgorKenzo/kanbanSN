@@ -1,12 +1,55 @@
-<h1 mat-dialog-title>Inserir tarefa</h1>
+<h1 mat-dialog-title>Editar tarefa</h1>
 <div mat-dialog-content>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" class="fullWidth" color="accent">
     <mat-label>Título</mat-label>
-    <input matInput [(ngModel)]="data.name">
+    <input matInput [(ngModel)]="tempTarefa.nome">
   </mat-form-field>
-  Escolher tags aqui
+
+  <div style="display: flex;">
+    <h4 style="flex: 9; line-height: 39px;">Tags</h4>
+    
+    <button mat-icon-button class="addNovatagTarefaNova" [matMenuTriggerFor]="menuX">
+      <mat-icon>add_circle</mat-icon>
+    </button>
+  </div>
+
+  <div class="listaTag" *ngIf="tempTarefa.tags.length > 0">
+    
+    <mat-chip-list>
+      <mat-chip *ngFor="let tag of tempTarefa.tags" [style.background-color]="tag.cor">
+        <span *ngIf="checaSeClaro(tag.cor)" class="chipClaro">{{tag.nome}}</span>
+        <span *ngIf="!checaSeClaro(tag.cor)" class="chipEscuro">{{tag.nome}}</span>
+
+        <button matChipRemove *ngIf="checaSeClaro(tag.cor)">
+          <mat-icon (click)="deletar(tag)" style="color: black;">cancel</mat-icon>
+        </button>
+        <button matChipRemove *ngIf="!checaSeClaro(tag.cor)">
+          <mat-icon (click)="deletar(tag)">cancel</mat-icon>
+        </button>
+
+      </mat-chip>
+    </mat-chip-list>
+
+  </div><!--Tags-->
+
+  <mat-menu #menuX="matMenu" class="meuMenu">
+    <div *ngFor="let t of tags" (click)="adicionarTagTarefaNova(t)" >
+      <button mat-flat-button [style.background-color]="t.cor" class="meuBtnMenu" *ngIf="!checaSeClaro(t.cor)" style="color: white;">
+        <span>{{t.nome}}</span>
+      </button>
+      <button mat-flat-button [style.background-color]="t.cor" class="meuBtnMenu" *ngIf="checaSeClaro(t.cor)" style="color: black;">
+        <span>{{t.nome}}</span>
+      </button>
+    </div>
+  </mat-menu>
+
+
+  <mat-form-field appearance="fill" class="fullWidth" color="accent">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput placeholder="Descrição" class="tallTextArea" [(ngModel)]="tempTarefa.desc"></textarea>
+  </mat-form-field>
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Cancelar</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+<div mat-dialog-actions align="end">
+  <button mat-flat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-flat-button color="accent" [mat-dialog-close]="tempTarefa" cdkFocusInitial>Ok</button>
 </div>
