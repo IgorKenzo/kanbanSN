@@ -31,6 +31,10 @@
   /* position: relative; */
 }
 
+.cdk-drag-placeholder {
+  opacity: 0%;
+}
+
 .listaTag {
   overflow-x: scroll;
   white-space: nowrap;
