@@ -1,19 +1,20 @@
-.CabecalhoColuna {
-  font-size: larger;
-  padding-left: 10px;
-}
-
 .column_flex {
   display: flex;
   align-items: flex-start;
+  min-height: calc(100vh - 64px);
+  overflow-y: hidden; /*Não tá funfando...*/
 }
+
+/* max-height: 90vh;
+overflow-y: scroll;
+white-space: nowrap; */
 
 .column_list {
   display: flex;
   flex-direction: column;
   flex: 1;
   max-width: 33%;
-  min-width: 15%;
+  min-width: 20%;
 
   background-color: #404040;
   border-radius: 5px;
@@ -21,11 +22,16 @@
   padding: 10px;
 }
 
+.CabecalhoColuna {
+  font-size: larger;
+  padding-left: 10px;
+}
+
 .cardTarefa {
   margin-top: 5px;
   margin-top: 5px;
   border-radius: 5px;
-  min-height: 30px;
+  min-height: 40px;
   font-size: medium;
   background-color: #303030;
   /* position: relative; */
@@ -39,7 +45,7 @@
   overflow-x: scroll;
   white-space: nowrap;
 
-  margin-top: 5px;
+  margin-top: 8px;
   margin-left: 5px;
 }
 
@@ -56,6 +62,7 @@
   height: 12px;
   border-radius: 10px;
   margin-right: 5px;
+  margin-top: 8px;
 
   display: inline-block;
 }
@@ -65,9 +72,23 @@
   display: flex;
 }
 
-.spanTipo1 {
+.spanTipo8 {
+  flex: 8;
+  /* line-height: 40px; */
+  padding-top: 5px;
+  padding-bottom: 8px;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.divTipo1 {
+  position: relative;
   flex: 1;
-  line-height: 40px;
+}
+
+.iconeCard {
+  position: absolute;
+  bottom: 0;
 }
 
 .corBrancaAntiBug {

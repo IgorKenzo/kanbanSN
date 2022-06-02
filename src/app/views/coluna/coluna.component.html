@@ -2,7 +2,7 @@
   <div *ngIf="colunas" class="column_flex" cdkDropListGroup>
 
     <mat-list class="column_list" *ngFor="let c of colunas" cdkDrag>
-      
+
       <div style="display: flex;">
 
         <div mat-subheader class="CabecalhoColuna" style="flex: 9;" *ngIf="indexColunaEdit != colunas.indexOf(c)">{{c.nome}}</div>
@@ -19,80 +19,85 @@
         <button mat-icon-button [matMenuTriggerFor]="menuY">
           <mat-icon class="corBrancaAntiBug">more_vert</mat-icon>
         </button>
-      </div>
 
-      <mat-menu #menuY="matMenu">
-        <button mat-menu-item (click)="selecionarColunaEdicao(colunas.indexOf(c))">
-          <mat-icon>edit</mat-icon>
-          <span>Renomear</span>
-        </button>
+        <mat-menu #menuY="matMenu">
+          <button mat-menu-item (click)="selecionarColunaEdicao(colunas.indexOf(c))">
+            <mat-icon>edit</mat-icon>
+            <span>Renomear</span>
+          </button>
 
-        <button mat-menu-item (click)="deletarColuna(c.id)">
-          <mat-icon color="warn">delete</mat-icon>
-          <span>Deletar Coluna</span>
-        </button>
-      </mat-menu>
+          <button mat-menu-item (click)="deletarColuna(c.id)">
+            <mat-icon color="warn">delete</mat-icon>
+            <span>Deletar Coluna</span>
+          </button>
+        </mat-menu>
+      </div><!--Cabeçalho coluna-->
 
-        <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="c.tarefas" (cdkDropListDropped)="drop($event)" style="min-height: 5px;">
-          <div class="cardTarefa" *ngFor="let t of c.tarefas" cdkDrag>
-            <div class="listaTag" *ngIf="t.tags.length > 0">
-              <div *ngFor="let tag of t.tags" class="marcadorTag" [style.background-color]="tag.cor"></div>
-            </div><!--Tags-->
-            <div class="tituloIconsCard">
-              <span class="spanTipo1 corBrancaAntiBug">{{t.nome}}</span>
-              
-              <button mat-icon-button color="accent" (click)="openDialog(t, c)">
+      <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="c.tarefas" (cdkDropListDropped)="drop($event)" style="min-height: 5px;">
+
+        <div class="cardTarefa" *ngFor="let t of c.tarefas" cdkDrag>
+          <div class="listaTag" *ngIf="t.tags.length > 0">
+            <div *ngFor="let tag of t.tags" class="marcadorTag" [style.background-color]="tag.cor"></div>
+          </div><!--Tags-->
+          <div class="tituloIconsCard">
+            <span class="spanTipo8 corBrancaAntiBug">{{t.nome}}</span>
+
+            <div class="divTipo1">
+              <button mat-icon-button color="accent" (click)="openDialog(t, c)" class="iconeCard">
                 <mat-icon>edit</mat-icon>
               </button>
-              <button mat-icon-button color="warn" (click)="deletarTarefa(c, t)">
+            </div>
+            <div class="divTipo1">
+              <button mat-icon-button color="warn" (click)="deletarTarefa(c, t)" class="iconeCard">
                   <mat-icon>delete</mat-icon>
               </button>
+            </div>
+          </div><!--Titulo (/) (U)-->
+        </div><!--Card-->
 
-            </div><!--Titulo (+) (/) (U)-->
-          </div><!--Card-->
-        </div><!--Drop List-->
+      </div><!--Drop List-->
 
-        <button mat-flat-button color="accent" (click)="novo(colunas.indexOf(c))" class="btnAddNew" *ngIf="!(indexColuna == colunas.indexOf(c)) ">
-          <mat-icon>add</mat-icon>
-        </button><!--Nova Tarefa-->
+      <button mat-flat-button color="accent" (click)="novo(colunas.indexOf(c))" class="btnAddNew" *ngIf="!(indexColuna == colunas.indexOf(c)) ">
+        <mat-icon>add</mat-icon>
+      </button><!--Nova Tarefa-->
 
-        <div *ngIf="tarefa && indexColuna == colunas.indexOf(c)" class="formNovaTarefa">
-          <div class="listaTag" *ngIf="tarefa.tags.length > 0">
-            <div *ngFor="let tag of tarefa.tags" class="marcadorTag" [style.background-color]="tag.cor"></div>
-          </div><!--Tags-->
+      <div *ngIf="tarefa && indexColuna == colunas.indexOf(c)" class="formNovaTarefa">
+        <div class="listaTag" *ngIf="tarefa.tags.length > 0">
+          <div *ngFor="let tag of tarefa.tags" class="marcadorTag" [style.background-color]="tag.cor"></div>
+        </div><!--Tags-->
 
-          <form style="display: flex;">
-            <mat-form-field appearance="outline" color="accent" style="margin-bottom: -1.25em; flex: 9;">
-              <mat-label>Nome</mat-label>
-              <input matInput name="NomeTag" placeholder="Nome da tarefa" [(ngModel)]="tarefa.nome" autofocus autocomplete="off">
-            </mat-form-field>
-            <button mat-icon-button class="addNovatagTarefaNova" [matMenuTriggerFor]="menuX">
-              <mat-icon>add_circle</mat-icon>
-            </button>
+        <form style="display: flex;">
+          <mat-form-field appearance="outline" color="accent" style="margin-bottom: -1.25em; flex: 9;">
+            <mat-label>Nome</mat-label>
+            <input matInput name="NomeTag" placeholder="Nome da tarefa" [(ngModel)]="tarefa.nome" autofocus autocomplete="off">
+          </mat-form-field>
+          <button mat-icon-button class="addNovatagTarefaNova" [matMenuTriggerFor]="menuX">
+            <mat-icon>add_circle</mat-icon>
+          </button>
 
-            <mat-menu #menuX="matMenu" class="meuMenu">
-              <div *ngFor="let t of tags" (click)="adicionarTagTarefaNova(t)" >
-                <button mat-flat-button [style.background-color]="t.cor" class="meuBtnMenu" *ngIf="!ChecaSeClaro(t.cor)" style="color: white;">
-                  <span>{{t.nome}}</span>
-                </button>
-                <button mat-flat-button [style.background-color]="t.cor" class="meuBtnMenu" *ngIf="ChecaSeClaro(t.cor)" style="color: black;">
-                  <span>{{t.nome}}</span>
-                </button>
-              </div>
-            </mat-menu>
+          <mat-menu #menuX="matMenu" class="meuMenu">
+            <div *ngFor="let t of tags" (click)="adicionarTagTarefaNova(t)" >
+              <button mat-flat-button [style.background-color]="t.cor" class="meuBtnMenu" *ngIf="!ChecaSeClaro(t.cor)" style="color: white;">
+                <span>{{t.nome}}</span>
+              </button>
+              <button mat-flat-button [style.background-color]="t.cor" class="meuBtnMenu" *ngIf="ChecaSeClaro(t.cor)" style="color: black;">
+                <span>{{t.nome}}</span>
+              </button>
+            </div>
+          </mat-menu>
 
-          </form><!--Input (+)-->
+        </form><!--Input (+)-->
 
-          <div class="linhaBtns">
-            <button mat-flat-button color="accent" (click)="adicionarTarefa()" class="btnSalvar">
-              Salvar
-            </button>
-            <button mat-flat-button color="warn" (click)="cancelar()" class="btnCancelar">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </div><!--Salvar Deletar-->
+        <div class="linhaBtns">
+          <button mat-flat-button color="accent" (click)="adicionarTarefa()" class="btnSalvar">
+            Salvar
+          </button>
+          <button mat-flat-button color="warn" (click)="cancelar()" class="btnCancelar">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div><!--Salvar Deletar-->
 
-        </div><!--Div nova Tarefa-->
+      </div><!--Div nova Tarefa-->
 
     </mat-list>
 

@@ -147,51 +147,6 @@
           ]
         },
         {
-          "id": -1,
-          "nome": "Tenta copiar o texto sem arrastar",
-          "tags": [
-            {
-              "nome": "Laranja",
-              "cor": "#ff8800"
-            }
-          ]
-        },
-        {
-          "nome": "vxvxv",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "xxvxv",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "vxvxvxv",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "bdfbdbdb",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "bdfbdfb",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "bdfbdbdbdb",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "thehehe",
-          "tags": [],
-          "desc": ""
-        },
-        {
           "nome": "sjfjsfjsifbisfbis",
           "tags": [],
           "desc": ""
@@ -207,12 +162,32 @@
           "desc": ""
         },
         {
-          "nome": "dssdsd",
+          "nome": "afdajhgkf",
           "tags": [],
           "desc": ""
         },
         {
-          "nome": "aaaaaaaaaaaa",
+          "nome": "dada",
+          "tags": [],
+          "desc": ""
+        },
+        {
+          "nome": "adfada",
+          "tags": [],
+          "desc": ""
+        },
+        {
+          "nome": "sgsfgs",
+          "tags": [],
+          "desc": ""
+        },
+        {
+          "nome": "gsgsgs",
+          "tags": [],
+          "desc": ""
+        },
+        {
+          "nome": "gsgsgsg",
           "tags": [],
           "desc": ""
         }
@@ -285,11 +260,47 @@
       "tarefas": [
         {
           "nome": "Tarefa muito grande não trunca ou quebra linha",
-          "tags": [],
+          "tags": [
+            {
+              "nome": "Claro",
+              "cor": "#fafd6d"
+            },
+            {
+              "nome": "C",
+              "cor": "#2aa32c"
+            },
+            {
+              "nome": "Laranja",
+              "cor": "#ff8800"
+            },
+            {
+              "nome": "Branco",
+              "cor": "#ffffff"
+            },
+            {
+              "nome": "ddgdgd",
+              "cor": "#712B9C"
+            }
+          ],
+          "desc": ""
+        },
+        {
+          "nome": "limitar altura da coluna e torna-la scrollable",
+          "tags": [
+            {
+              "nome": "Laranja",
+              "cor": "#ff8800"
+            }
+          ],
           "desc": ""
         }
       ],
       "id": 10
+    },
+    {
+      "nome": "Nova",
+      "tarefas": [],
+      "id": 11
     }
   ],
   "tag": [

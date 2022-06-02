@@ -99,7 +99,7 @@ export class ColunaComponent implements OnInit {
   }
 
   adicionarTarefa(){ //, tar: Tarefa
-    if (this.colunas && this.indexColuna != undefined && this.tarefa) {
+    if (this.colunas && this.indexColuna != undefined && this.tarefa  && this.tarefa.nome.length > 0) {
       this.colunas[this.indexColuna].tarefas.push(this.tarefa);
       this.colunaService.salvarColuna(this.colunas[this.indexColuna]).subscribe(() => {
         this.listar();
