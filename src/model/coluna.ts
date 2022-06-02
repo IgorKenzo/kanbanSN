@@ -1,7 +1,7 @@
 import { Tarefa } from "./tarefa";
 
 export class Coluna {
-    id = -1;
+    id? = undefined;
     nome = "";
     tarefas = new Array<Tarefa>();
 }

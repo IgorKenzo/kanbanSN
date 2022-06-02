@@ -116,3 +116,14 @@
   text-align: left;
   border-radius: 200px;
 }
+
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.btnConcluir {
+  margin: 5px;
+  flex: 1;
+}

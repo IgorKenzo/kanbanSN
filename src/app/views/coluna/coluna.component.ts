@@ -17,8 +17,9 @@ import { TarefaFormDialogComponent } from '../tarefa-form-dialog/tarefa-form-dia
 export class ColunaComponent implements OnInit {
 
   colunas? : Coluna[];
-  tarefa? : Tarefa
-  indexColuna? : number
+  tarefa? : Tarefa;
+  indexColuna? : number;
+  indexColunaEdit?: number;
 
   tags : Tag[] = [];
 
@@ -29,6 +30,33 @@ export class ColunaComponent implements OnInit {
     this.listarTags();
   }
 
+  novaColuna(nome: string) {
+    const c = new Coluna();
+    c.nome = nome;
+
+    this.colunaService.inserir(c).subscribe(res => {
+      this.listar();
+    });
+  }
+
+  selecionarColunaEdicao(id: number) {
+    this.indexColunaEdit = id;
+  }
+
+  concluir(i : number) {
+    this.indexColunaEdit = undefined;
+    this.colunaService.salvarColuna(this.colunas![i]).subscribe(res => {
+      this.listar();
+    })
+  }
+
+  deletarColuna(id?: number) {
+    if(id == undefined) { return }
+
+    this.colunaService.deletar(id).subscribe(() => {
+      this.listar();
+    })
+  }
 
   openDialog(t: Tarefa, col: Coluna): void {
     const dialogRef = this.dialog.open(TarefaFormDialogComponent, {

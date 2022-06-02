@@ -2,7 +2,36 @@
   <div *ngIf="colunas" class="column_flex" cdkDropListGroup>
 
     <mat-list class="column_list" *ngFor="let c of colunas" cdkDrag>
-      <div mat-subheader class="CabecalhoColuna">{{c.nome}}</div>
+      
+      <div style="display: flex;">
+
+        <div mat-subheader class="CabecalhoColuna" style="flex: 9;" *ngIf="indexColunaEdit != colunas.indexOf(c)">{{c.nome}}</div>
+
+        <mat-form-field appearance="outline" color="accent" style="margin-bottom: -1.25em; flex: 9;" *ngIf="indexColunaEdit == colunas.indexOf(c)">
+          <mat-label>Nome</mat-label>
+          <input matInput name="NomeColuna" placeholder="Nome da Coluna" autofocus autocomplete="off" [(ngModel)]="c.nome">
+        </mat-form-field>
+
+        <button mat-flat-button color="accent" (click)="concluir(colunas.indexOf(c))" class="btnConcluir" *ngIf="indexColunaEdit == colunas.indexOf(c)">
+          <mat-icon>check</mat-icon>
+        </button>
+
+        <button mat-icon-button [matMenuTriggerFor]="menuY">
+          <mat-icon class="corBrancaAntiBug">more_vert</mat-icon>
+        </button>
+      </div>
+
+      <mat-menu #menuY="matMenu">
+        <button mat-menu-item (click)="selecionarColunaEdicao(colunas.indexOf(c))">
+          <mat-icon>edit</mat-icon>
+          <span>Renomear</span>
+        </button>
+
+        <button mat-menu-item (click)="deletarColuna(c.id)">
+          <mat-icon color="warn">delete</mat-icon>
+          <span>Deletar Coluna</span>
+        </button>
+      </mat-menu>
 
         <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="c.tarefas" (cdkDropListDropped)="drop($event)" style="min-height: 5px;">
           <div class="cardTarefa" *ngFor="let t of c.tarefas" cdkDrag>
@@ -11,30 +40,13 @@
             </div><!--Tags-->
             <div class="tituloIconsCard">
               <span class="spanTipo1 corBrancaAntiBug">{{t.nome}}</span>
-              <button mat-icon-button [matMenuTriggerFor]="menuY">
-                <mat-icon class="corBrancaAntiBug">add_circle</mat-icon>
-              </button>
+              
               <button mat-icon-button color="accent" (click)="openDialog(t, c)">
                 <mat-icon>edit</mat-icon>
               </button>
               <button mat-icon-button color="warn" (click)="deletarTarefa(c, t)">
                   <mat-icon>delete</mat-icon>
               </button>
-
-              <mat-menu #menuY="matMenu">
-                <button mat-menu-item>
-                  <mat-icon>dialpad</mat-icon>
-                  <span>Redial</span>
-                </button>
-                <button mat-menu-item disabled>
-                  <mat-icon>voicemail</mat-icon>
-                  <span>Check voice mail</span>
-                </button>
-                <button mat-menu-item>
-                  <mat-icon>notifications_off</mat-icon>
-                  <span>Disable alerts</span>
-                </button>
-              </mat-menu>
 
             </div><!--Titulo (+) (/) (U)-->
           </div><!--Card-->
@@ -86,3 +98,7 @@
 
   </div>
 </div>
+
+<button mat-fab class="fab" (click)="novaColuna('Nova')" color="accent" aria-label="novo">
+  <mat-icon>add</mat-icon>
+</button>
