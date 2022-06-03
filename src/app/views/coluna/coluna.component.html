@@ -33,7 +33,7 @@
         </mat-menu>
       </div><!--Cabeçalho coluna-->
 
-      <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="c.tarefas" (cdkDropListDropped)="drop($event)" style="min-height: 5px;">
+      <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="c.tarefas" (cdkDropListDropped)="drop($event)" class="zonaDrop">
 
         <div class="cardTarefa" *ngFor="let t of c.tarefas" cdkDrag>
           <div class="listaTag" *ngIf="t.tags.length > 0">

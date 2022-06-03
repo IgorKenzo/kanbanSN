@@ -1,7 +1,7 @@
 .column_flex {
   display: flex;
   align-items: flex-start;
-  min-height: calc(100vh - 64px);
+  height: calc(100vh - 64px);
   overflow-y: hidden; /*Não tá funfando...*/
 }
 
@@ -25,6 +25,13 @@ white-space: nowrap; */
 .CabecalhoColuna {
   font-size: larger;
   padding-left: 10px;
+}
+
+.zonaDrop {
+  min-height: 5px;
+  max-height: 65vh;
+  overflow-y: scroll;
+  white-space: nowrap;
 }
 
 .cardTarefa {
