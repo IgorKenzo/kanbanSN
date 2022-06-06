@@ -24,6 +24,7 @@ import { TagComponent } from './views/tag/tag.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { TarefaFormDialogComponent } from './views/tarefa-form-dialog/tarefa-form-dialog.component';
+import { SobreComponent } from './views/sobre/sobre.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { TarefaFormDialogComponent } from './views/tarefa-form-dialog/tarefa-for
     AppComponent,
     ColunaComponent,
     TagComponent,
-    TarefaFormDialogComponent
+    TarefaFormDialogComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,

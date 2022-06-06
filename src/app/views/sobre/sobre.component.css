@@ -1,0 +1,24 @@
+.sobre-content {
+    margin: 10px;
+}
+
+.integrante_card {
+    max-width: 300px;
+    flex: 1;
+    margin: 10px 10px 10px 0px;
+}
+
+.header-image-igor {
+    background-image: url('../../../assets/perfilIgor.jpg');
+    background-size: cover;
+}
+
+.header-image-claro {
+    background-image: url('../../../assets/perfilClaro.jpg');
+    background-size: cover;
+  }
+
+.sem-cor-de-link {
+    text-decoration: none;
+    color: inherit;
+}
