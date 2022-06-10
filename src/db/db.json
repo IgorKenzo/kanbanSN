@@ -6,24 +6,6 @@
       "tarefas": [
         {
           "id": -1,
-          "nome": "GSGSGS",
-          "tags": [
-            {
-              "nome": "A",
-              "cor": "#a3322a"
-            },
-            {
-              "nome": "B",
-              "cor": "#2a6ba3"
-            },
-            {
-              "nome": "C",
-              "cor": "#2aa32c"
-            }
-          ]
-        },
-        {
-          "id": -1,
           "nome": "BFVBFBFBFB",
           "tags": [],
           "desc": "asdasdas"
@@ -45,11 +27,6 @@
               "cor": "#2aa32c"
             }
           ]
-        },
-        {
-          "nome": "ghghghg",
-          "tags": [],
-          "desc": ""
         }
       ]
     },
@@ -58,9 +35,29 @@
       "nome": "Doing",
       "tarefas": [
         {
+          "nome": "AAAAAAAAAAAAA",
+          "tags": [
+            {
+              "nome": "Claro",
+              "cor": "#fafd6d"
+            }
+          ],
+          "desc": "VBNMMM"
+        },
+        {
           "id": -1,
           "nome": "tarefa",
           "tags": []
+        },
+        {
+          "id": -1,
+          "nome": "Add",
+          "tags": [
+            {
+              "nome": "",
+              "cor": "#737373"
+            }
+          ]
         },
         {
           "id": -1,
@@ -81,70 +78,9 @@
           ]
         },
         {
-          "nome": "AAAAAAAAAAAAA",
-          "tags": [
-            {
-              "nome": "Claro",
-              "cor": "#fafd6d"
-            }
-          ],
-          "desc": "VBNMMM"
-        },
-        {
-          "id": -1,
-          "nome": "Add",
-          "tags": [
-            {
-              "nome": "",
-              "cor": "#FF9900"
-            },
-            {
-              "nome": "",
-              "cor": "#737373"
-            },
-            {
-              "nome": "",
-              "cor": "#FF9900"
-            },
-            {
-              "nome": "",
-              "cor": "#737373"
-            },
-            {
-              "nome": "",
-              "cor": "#FF9900"
-            },
-            {
-              "nome": "",
-              "cor": "#737373"
-            },
-            {
-              "nome": "",
-              "cor": "#FF9900"
-            },
-            {
-              "nome": "",
-              "cor": "#737373"
-            },
-            {
-              "nome": "",
-              "cor": "#FF9900"
-            },
-            {
-              "nome": "",
-              "cor": "#737373"
-            }
-          ]
-        },
-        {
-          "id": -1,
-          "nome": "Add",
-          "tags": [
-            {
-              "nome": "",
-              "cor": "#737373"
-            }
-          ]
+          "nome": "ghghghg",
+          "tags": [],
+          "desc": ""
         },
         {
           "nome": "sjfjsfjsifbisfbis",
@@ -162,32 +98,27 @@
           "desc": ""
         },
         {
-          "nome": "afdajhgkf",
+          "nome": "adadadad",
           "tags": [],
           "desc": ""
         },
         {
-          "nome": "dada",
+          "nome": "dadadada",
           "tags": [],
           "desc": ""
         },
         {
-          "nome": "adfada",
+          "nome": "gdfsggsdgsdfg",
           "tags": [],
           "desc": ""
         },
         {
-          "nome": "sgsfgs",
+          "nome": "sgsdgsgsdgsd",
           "tags": [],
           "desc": ""
         },
         {
-          "nome": "gsgsgs",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "gsgsgsg",
+          "nome": "adada",
           "tags": [],
           "desc": ""
         }
@@ -198,60 +129,24 @@
       "nome": "Done",
       "tarefas": [
         {
-          "nome": "asd",
+          "nome": "Fates weave their threads Our lives are sewn Born to a life All but our own We feel it inside our bones It's in the blood It's in the blood It's in the blood Oh, it's in the blood It's in the blood Loves in your life, live ever on Home is not where you live And who cares when you're gone They'll follow you to the beyond It's in the blood Oh, it's in the blood It's in the blood Oh, it's in the blood",
           "tags": [
             {
               "nome": "A",
               "cor": "#a3322a"
-            },
-            {
-              "nome": "B",
-              "cor": "#2a6ba3"
-            },
-            {
-              "nome": "C",
-              "cor": "#2aa32c"
-            },
-            {
-              "nome": "Laranja",
-              "cor": "#ff8800"
-            },
-            {
-              "nome": "Tag da Ju",
-              "cor": "#9e4c4c"
-            },
-            {
-              "nome": "Tag da Ju",
-              "cor": "#9e4c4c"
-            },
-            {
-              "nome": "Claro",
-              "cor": "#fafd6d"
-            },
-            {
-              "nome": "Claro",
-              "cor": "#fafd6d"
-            },
-            {
-              "nome": "Branco",
-              "cor": "#ffffff"
-            },
-            {
-              "nome": "ddgdgd",
-              "cor": "#712B9C"
             }
           ],
           "desc": ""
         },
         {
-          "id": -1,
-          "nome": "jksbfsjkhfjkshfjkshfjksf",
+          "nome": "Nome muito grandeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
           "tags": [
             {
-              "nome": "C",
-              "cor": "#2aa32c"
+              "nome": "Laranja",
+              "cor": "#ff8800"
             }
-          ]
+          ],
+          "desc": ""
         }
       ]
     },
@@ -259,24 +154,38 @@
       "nome": "Bugs conhecidos",
       "tarefas": [
         {
-          "nome": "Tarefa muito grande não trunca ou quebra linha",
+          "nome": "Bloquer Drag enquanto edita cabecalho coluna",
+          "tags": [
+            {
+              "nome": "Laranja",
+              "cor": "#ff8800"
+            }
+          ],
+          "desc": ""
+        },
+        {
+          "nome": "Coluna volta pra position original quando editada",
           "tags": [
             {
               "nome": "Claro",
               "cor": "#fafd6d"
-            },
+            }
+          ],
+          "desc": ""
+        },
+        {
+          "nome": "Guardar e Setar % scroll no local storage",
+          "tags": [
             {
-              "nome": "C",
-              "cor": "#2aa32c"
-            },
-            {
-              "nome": "Laranja",
-              "cor": "#ff8800"
-            },
-            {
-              "nome": "Branco",
-              "cor": "#ffffff"
-            },
+              "nome": "Tag da Ju",
+              "cor": "#9e4c4c"
+            }
+          ],
+          "desc": ""
+        },
+        {
+          "nome": "Colocar txt bonito no sobre",
+          "tags": [
             {
               "nome": "ddgdgd",
               "cor": "#712B9C"
@@ -285,25 +194,20 @@
           "desc": ""
         },
         {
-          "nome": "limitar altura da coluna e torna-la scrollable",
+          "nome": "Tentar separar componentes",
           "tags": [
             {
-              "nome": "Laranja",
-              "cor": "#ff8800"
+              "nome": "C",
+              "cor": "#2aa32c"
             }
           ],
-          "desc": ""
-        },
-        {
-          "nome": "Arrumar scrolls",
-          "tags": [],
           "desc": ""
         }
       ],
       "id": 10
     },
     {
-      "nome": "Nova",
+      "nome": "adjahdjkahdjka",
       "tarefas": [],
       "id": 11
     }

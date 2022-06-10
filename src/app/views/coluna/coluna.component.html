@@ -35,7 +35,7 @@
 
       <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="c.tarefas" (cdkDropListDropped)="drop($event)" class="zonaDrop">
 
-        <div class="cardTarefa" *ngFor="let t of c.tarefas" cdkDrag>
+        <article class="cardTarefa" *ngFor="let t of c.tarefas" cdkDrag>
           <div class="listaTag" *ngIf="t.tags.length > 0">
             <div *ngFor="let tag of t.tags" class="marcadorTag" [style.background-color]="tag.cor"></div>
           </div><!--Tags-->
@@ -53,7 +53,7 @@
               </button>
             </div>
           </div><!--Titulo (/) (U)-->
-        </div><!--Card-->
+        </article><!--Card-->
 
       </div><!--Drop List-->
 
