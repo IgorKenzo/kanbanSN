@@ -8,6 +8,7 @@ import { Tarefa } from 'src/model/tarefa';
 import { ColunaService } from 'src/services/coluna.service';
 import { TagService } from 'src/services/tag.service';
 import { TarefaFormDialogComponent } from '../tarefa-form-dialog/tarefa-form-dialog.component';
+//import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-coluna',
@@ -23,6 +24,9 @@ export class ColunaComponent implements OnInit {
 
   tags : Tag[] = [];
 
+  //nomeFormControl = new FormControl('', [Validators.required]);
+
+
   constructor(private TagService: TagService, private colunaService: ColunaService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -30,11 +34,13 @@ export class ColunaComponent implements OnInit {
     this.listarTags();
   }
 
-  novaColuna(nome: string) {
+  novaColuna() {
     const c = new Coluna();
-    c.nome = nome;
+    //c.nome = nome;
+    c.ordem = this.colunas ? this.colunas.length + 1 : 0;
 
     this.colunaService.inserir(c).subscribe(res => {
+      this.indexColunaEdit = c.ordem - 1;
       this.listar();
     });
   }
@@ -88,7 +94,7 @@ export class ColunaComponent implements OnInit {
 
   listar() {
     this.colunaService.listar().subscribe(cols => {
-      this.colunas = cols;
+      this.colunas = cols.sort((c1, c2) => { return c1.ordem <= c2.ordem ? -1 : 1; } );
     })
   }
 
@@ -164,6 +170,18 @@ export class ColunaComponent implements OnInit {
   drop2(event: CdkDragDrop<Coluna[]>) {
     if (this.colunas) {
       moveItemInArray(this.colunas, event.previousIndex, event.currentIndex);
+      console.log(this.colunas);
+
+      this.colunas[event.previousIndex].ordem = event.previousIndex + 1;
+      this.colunas[event.currentIndex].ordem = event.currentIndex + 1;
+
+      
+      this.colunaService.salvarColuna(this.colunas[event.previousIndex]).subscribe(() => {
+        this.colunaService.salvarColuna(this.colunas![event.currentIndex]).subscribe(() => {
+          this.listar();
+        });
+      });
+      
     }
   }
 

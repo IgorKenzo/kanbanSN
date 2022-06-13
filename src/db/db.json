@@ -3,6 +3,7 @@
     {
       "id": 1,
       "nome": "To Do",
+      "ordem": 1,
       "tarefas": [
         {
           "id": -1,
@@ -33,6 +34,7 @@
     {
       "id": 2,
       "nome": "Doing",
+      "ordem": 2,
       "tarefas": [
         {
           "nome": "AAAAAAAAAAAAA",
@@ -127,6 +129,7 @@
     {
       "id": 3,
       "nome": "Done",
+      "ordem": 3,
       "tarefas": [
         {
           "nome": "Fates weave their threads Our lives are sewn Born to a life All but our own We feel it inside our bones It's in the blood It's in the blood It's in the blood Oh, it's in the blood It's in the blood Loves in your life, live ever on Home is not where you live And who cares when you're gone They'll follow you to the beyond It's in the blood Oh, it's in the blood It's in the blood Oh, it's in the blood",
@@ -152,6 +155,7 @@
     },
     {
       "nome": "Bugs conhecidos",
+      "ordem": 4,
       "tarefas": [
         {
           "nome": "Bloquer Drag enquanto edita cabecalho coluna",
@@ -159,16 +163,6 @@
             {
               "nome": "Laranja",
               "cor": "#ff8800"
-            }
-          ],
-          "desc": ""
-        },
-        {
-          "nome": "Coluna volta pra position original quando editada",
-          "tags": [
-            {
-              "nome": "Claro",
-              "cor": "#fafd6d"
             }
           ],
           "desc": ""
@@ -207,9 +201,27 @@
       "id": 10
     },
     {
-      "nome": "adjahdjkahdjka",
+      "nome": "Bugs arrumados",
+      "tarefas": [
+        {
+          "nome": "Coluna volta pra position original quando editada",
+          "tags": [
+            {
+              "nome": "Claro",
+              "cor": "#fafd6d"
+            }
+          ],
+          "desc": ""
+        }
+      ],
+      "id": 11,
+      "ordem": 5
+    },
+    {
+      "nome": "asdas",
       "tarefas": [],
-      "id": 11
+      "ordem": 6,
+      "id": 12
     }
   ],
   "tag": [

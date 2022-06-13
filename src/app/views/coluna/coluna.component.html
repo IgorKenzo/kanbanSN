@@ -9,7 +9,11 @@
 
         <mat-form-field appearance="outline" color="accent" style="margin-bottom: -1.25em; flex: 9;" *ngIf="indexColunaEdit == colunas.indexOf(c)">
           <mat-label>Nome</mat-label>
-          <input matInput name="NomeColuna" placeholder="Nome da Coluna" autofocus autocomplete="off" [(ngModel)]="c.nome">
+          
+          <input type="text" matInput name="NomeColuna" placeholder="Nome da Coluna" autofocus autocomplete="off"  [(ngModel)]="c.nome">
+          <!-- <mat-error *ngIf="nomeFormControl.hasError('required')">
+            Nome é <strong>obrigatório</strong>
+          </mat-error> -->
         </mat-form-field>
 
         <button mat-flat-button color="accent" (click)="concluir(colunas.indexOf(c))" class="btnConcluir" *ngIf="indexColunaEdit == colunas.indexOf(c)">
@@ -104,6 +108,6 @@
   </div>
 </div>
 
-<button mat-fab class="fab" (click)="novaColuna('Nova')" color="accent" aria-label="novo">
+<button mat-fab class="fab" (click)="novaColuna()" color="accent" aria-label="novo">
   <mat-icon>add</mat-icon>
 </button>
