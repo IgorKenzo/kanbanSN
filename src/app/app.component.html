@@ -2,7 +2,21 @@
   <button mat-icon-button (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <h1>KanbanSN</h1>
+
+  <h1 *ngIf="!editing">{{title}}</h1>
+  <button mat-icon-button *ngIf="!editing" (click)="editing = true">
+    <mat-icon>edit</mat-icon>
+  </button>
+
+  <div style="font-size: 14px; margin-top: 18px;" *ngIf="editing">
+    <mat-form-field appearance="outline" color="accent">
+      <mat-label>Nome</mat-label>
+      <input type="text" matInput name="NomeQuadro" placeholder="Nome do Quadro" autofocus autocomplete="off"  [(ngModel)]="title">
+    </mat-form-field>
+    <button mat-icon-button color="accent" (click)="salvarNome()" style="height: 30px;">
+      <mat-icon>check</mat-icon>
+    </button>
+  </div>
 </mat-toolbar>
 
 <mat-sidenav-container>
