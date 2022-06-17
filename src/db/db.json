@@ -7,27 +7,23 @@
       "tarefas": [
         {
           "id": -1,
-          "nome": "BFVBFBFBFB",
-          "tags": [],
-          "desc": "asdasdas"
-        },
-        {
-          "id": -1,
-          "nome": "s",
+          "nome": "Apresentar",
           "tags": [
-            {
-              "nome": "Tag",
-              "cor": ""
-            },
-            {
-              "nome": "Tag",
-              "cor": ""
-            },
             {
               "nome": "C",
               "cor": "#2aa32c"
             }
           ]
+        },
+        {
+          "nome": "Criar nova coluna e trocar ordem",
+          "tags": [
+            {
+              "nome": "Tag da Ju",
+              "cor": "#9e4c4c"
+            }
+          ],
+          "desc": ""
         }
       ]
     },
@@ -37,33 +33,28 @@
       "ordem": 2,
       "tarefas": [
         {
-          "nome": "AAAAAAAAAAAAA",
+          "nome": "Alterar alguma coisa e cancelar",
           "tags": [
             {
-              "nome": "Claro",
-              "cor": "#fafd6d"
+              "nome": "Laranja",
+              "cor": "#ff8800"
             }
           ],
-          "desc": "VBNMMM"
+          "desc": "asdasdas"
         },
         {
           "id": -1,
-          "nome": "tarefa",
+          "nome": "só tarefa",
           "tags": []
         },
         {
           "id": -1,
-          "nome": "Add",
-          "tags": [
-            {
-              "nome": "",
-              "cor": "#737373"
-            }
-          ]
+          "nome": "Add tag",
+          "tags": []
         },
         {
           "id": -1,
-          "nome": "Aaaa",
+          "nome": "Tarefa com muitas tags",
           "tags": [
             {
               "nome": "A",
@@ -76,52 +67,41 @@
             {
               "nome": "C",
               "cor": "#2aa32c"
+            },
+            {
+              "nome": "Tag",
+              "cor": ""
+            },
+            {
+              "nome": "Laranja",
+              "cor": "#ff8800"
+            },
+            {
+              "nome": "Tag da Ju",
+              "cor": "#9e4c4c"
+            },
+            {
+              "nome": "Claro",
+              "cor": "#fafd6d"
+            },
+            {
+              "nome": "Branco",
+              "cor": "#ffffff"
+            },
+            {
+              "nome": "ddgdgd",
+              "cor": "#712B9C"
             }
           ]
         },
         {
-          "nome": "ghghghg",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "sjfjsfjsifbisfbis",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "kvbkjsbvhxjv",
+          "nome": "Mover para outra coluna",
           "tags": [
             {
               "nome": "Branco",
               "cor": "#ffffff"
             }
           ],
-          "desc": ""
-        },
-        {
-          "nome": "adadadad",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "dadadada",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "gdfsggsdgsdfg",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "sgsdgsgsdgsd",
-          "tags": [],
-          "desc": ""
-        },
-        {
-          "nome": "adada",
-          "tags": [],
           "desc": ""
         }
       ]
@@ -150,6 +130,17 @@
             }
           ],
           "desc": ""
+        },
+        {
+          "id": -1,
+          "nome": "Tarefa com descrição",
+          "tags": [
+            {
+              "nome": "Branco",
+              "cor": "#ffffff"
+            }
+          ],
+          "desc": "Descrição detalhada da tarefa."
         }
       ]
     },
