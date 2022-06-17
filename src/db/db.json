@@ -10,8 +10,8 @@
           "nome": "Apresentar",
           "tags": [
             {
-              "nome": "C",
-              "cor": "#2aa32c"
+              "nome": "Fazer",
+              "cor": "#712B9C"
             }
           ]
         },
@@ -19,8 +19,8 @@
           "nome": "Criar nova coluna e trocar ordem",
           "tags": [
             {
-              "nome": "Tag da Ju",
-              "cor": "#9e4c4c"
+              "nome": "Fazer",
+              "cor": "#712B9C"
             }
           ],
           "desc": ""
@@ -36,8 +36,12 @@
           "nome": "Alterar alguma coisa e cancelar",
           "tags": [
             {
-              "nome": "Laranja",
+              "nome": "Futuro",
               "cor": "#ff8800"
+            },
+            {
+              "nome": "Dev",
+              "cor": "#2a6ba3"
             }
           ],
           "desc": "asdasdas"
@@ -57,39 +61,35 @@
           "nome": "Tarefa com muitas tags",
           "tags": [
             {
-              "nome": "A",
+              "nome": "Importante",
               "cor": "#a3322a"
             },
             {
-              "nome": "B",
+              "nome": "Dev",
               "cor": "#2a6ba3"
             },
             {
-              "nome": "C",
+              "nome": "Design",
               "cor": "#2aa32c"
             },
             {
-              "nome": "Tag",
-              "cor": ""
-            },
-            {
-              "nome": "Laranja",
+              "nome": "Futuro",
               "cor": "#ff8800"
             },
             {
-              "nome": "Tag da Ju",
+              "nome": "Bug",
               "cor": "#9e4c4c"
             },
             {
-              "nome": "Claro",
+              "nome": "Foco",
               "cor": "#fafd6d"
             },
             {
-              "nome": "Branco",
+              "nome": "Tag de cor clara",
               "cor": "#ffffff"
             },
             {
-              "nome": "ddgdgd",
+              "nome": "Fazer",
               "cor": "#712B9C"
             }
           ]
@@ -98,8 +98,12 @@
           "nome": "Mover para outra coluna",
           "tags": [
             {
-              "nome": "Branco",
+              "nome": "Tag de cor clara",
               "cor": "#ffffff"
+            },
+            {
+              "nome": "Foco",
+              "cor": "#fafd6d"
             }
           ],
           "desc": ""
@@ -115,8 +119,12 @@
           "nome": "Fates weave their threads Our lives are sewn Born to a life All but our own We feel it inside our bones It's in the blood It's in the blood It's in the blood Oh, it's in the blood It's in the blood Loves in your life, live ever on Home is not where you live And who cares when you're gone They'll follow you to the beyond It's in the blood Oh, it's in the blood It's in the blood Oh, it's in the blood",
           "tags": [
             {
-              "nome": "A",
+              "nome": "Importante",
               "cor": "#a3322a"
+            },
+            {
+              "nome": "Design",
+              "cor": "#2aa32c"
             }
           ],
           "desc": ""
@@ -125,8 +133,12 @@
           "nome": "Nome muito grandeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
           "tags": [
             {
-              "nome": "Laranja",
-              "cor": "#ff8800"
+              "nome": "Importante",
+              "cor": "#a3322a"
+            },
+            {
+              "nome": "Design",
+              "cor": "#2aa32c"
             }
           ],
           "desc": ""
@@ -136,8 +148,8 @@
           "nome": "Tarefa com descrição",
           "tags": [
             {
-              "nome": "Branco",
-              "cor": "#ffffff"
+              "nome": "Foco",
+              "cor": "#fafd6d"
             }
           ],
           "desc": "Descrição detalhada da tarefa."
@@ -152,7 +164,11 @@
           "nome": "Bloquer Drag enquanto edita cabecalho coluna",
           "tags": [
             {
-              "nome": "Laranja",
+              "nome": "Bug",
+              "cor": "#9e4c4c"
+            },
+            {
+              "nome": "Futuro",
               "cor": "#ff8800"
             }
           ],
@@ -162,18 +178,12 @@
           "nome": "Guardar e Setar % scroll no local storage",
           "tags": [
             {
-              "nome": "Tag da Ju",
-              "cor": "#9e4c4c"
-            }
-          ],
-          "desc": ""
-        },
-        {
-          "nome": "Colocar txt bonito no sobre",
-          "tags": [
+              "nome": "Futuro",
+              "cor": "#ff8800"
+            },
             {
-              "nome": "ddgdgd",
-              "cor": "#712B9C"
+              "nome": "Bug",
+              "cor": "#9e4c4c"
             }
           ],
           "desc": ""
@@ -182,8 +192,8 @@
           "nome": "Tentar separar componentes",
           "tags": [
             {
-              "nome": "C",
-              "cor": "#2aa32c"
+              "nome": "Futuro",
+              "cor": "#ff8800"
             }
           ],
           "desc": ""
@@ -195,14 +205,24 @@
       "nome": "Bugs arrumados",
       "tarefas": [
         {
-          "nome": "Coluna volta pra position original quando editada",
+          "nome": "Colocar txt bonito no sobre",
           "tags": [
             {
-              "nome": "Claro",
-              "cor": "#fafd6d"
+              "nome": "Design",
+              "cor": "#2aa32c"
             }
           ],
           "desc": ""
+        },
+        {
+          "nome": "Coluna volta pra position original quando editada",
+          "tags": [
+            {
+              "nome": "Bug",
+              "cor": "#9e4c4c"
+            }
+          ],
+          "desc": "Não estava salvando"
         }
       ],
       "id": 11,
@@ -211,47 +231,42 @@
   ],
   "tag": [
     {
-      "nome": "A",
+      "nome": "Importante",
       "cor": "#a3322a",
       "id": 1
     },
     {
-      "nome": "B",
+      "nome": "Dev",
       "cor": "#2a6ba3",
       "id": 2
     },
     {
-      "nome": "C",
+      "nome": "Design",
       "cor": "#2aa32c",
       "id": 3
     },
     {
-      "nome": "Tag",
-      "cor": "",
-      "id": 9
-    },
-    {
-      "nome": "Laranja",
+      "nome": "Futuro",
       "cor": "#ff8800",
       "id": 10
     },
     {
-      "nome": "Tag da Ju",
+      "nome": "Bug",
       "cor": "#9e4c4c",
       "id": 11
     },
     {
-      "nome": "Claro",
+      "nome": "Foco",
       "cor": "#fafd6d",
       "id": 12
     },
     {
-      "nome": "Branco",
+      "nome": "Tag de cor clara",
       "cor": "#ffffff",
       "id": 13
     },
     {
-      "nome": "ddgdgd",
+      "nome": "Fazer",
       "cor": "#712B9C",
       "id": 14
     }
